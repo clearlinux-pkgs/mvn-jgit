@@ -4,17 +4,21 @@
 #
 Name     : mvn-jgit
 Version  : 2.0.0.201206130900.r
-Release  : 2
+Release  : 3
 URL      : https://github.com/eclipse/jgit/archive/v2.0.0.201206130900-r.tar.gz
 Source0  : https://github.com/eclipse/jgit/archive/v2.0.0.201206130900-r.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit-parent/2.0.0.201206130900-r/org.eclipse.jgit-parent-2.0.0.201206130900-r.pom
 Source2  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.jar
 Source3  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.pom
+Source4  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r/org.eclipse.jgit-3.2.0.201312181205-r.jar
+Source5  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r/org.eclipse.jgit-3.2.0.201312181205-r.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause EPL-1.0
 Requires: mvn-jgit-data = %{version}-%{release}
 Requires: mvn-jgit-license = %{version}-%{release}
+BuildRequires : apache-maven
+BuildRequires : buildreq-mvn
 
 %description
 == Java GIT ==
@@ -62,6 +66,12 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.ec
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r
 cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r/org.eclipse.jgit-3.2.0.201312181205-r.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r/org.eclipse.jgit-3.2.0.201312181205-r.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -71,6 +81,8 @@ cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.ec
 /usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit-parent/2.0.0.201206130900-r/org.eclipse.jgit-parent-2.0.0.201206130900-r.pom
 /usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.jar
 /usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.pom
+/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r/org.eclipse.jgit-3.2.0.201312181205-r.jar
+/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r/org.eclipse.jgit-3.2.0.201312181205-r.pom
 
 %files license
 %defattr(0644,root,root,0755)
