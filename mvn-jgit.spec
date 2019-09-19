@@ -4,17 +4,18 @@
 #
 Name     : mvn-jgit
 Version  : 2.0.0.201206130900.r
-Release  : 5
+Release  : 6
 URL      : https://github.com/eclipse/jgit/archive/v2.0.0.201206130900-r.tar.gz
 Source0  : https://github.com/eclipse/jgit/archive/v2.0.0.201206130900-r.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit-parent/2.0.0.201206130900-r/org.eclipse.jgit-parent-2.0.0.201206130900-r.pom
 Source2  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit-parent/3.2.0.201312181205-r/org.eclipse.jgit-parent-3.2.0.201312181205-r.pom
-Source3  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.jar
-Source4  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.pom
-Source5  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r/org.eclipse.jgit-3.2.0.201312181205-r.jar
-Source6  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r/org.eclipse.jgit-3.2.0.201312181205-r.pom
-Source7  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/5.3.0.201903130848-r/org.eclipse.jgit-5.3.0.201903130848-r.jar
-Source8  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/5.3.0.201903130848-r/org.eclipse.jgit-5.3.0.201903130848-r.pom
+Source3  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit-parent/5.3.0.201903130848-r/org.eclipse.jgit-parent-5.3.0.201903130848-r.pom
+Source4  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.jar
+Source5  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.pom
+Source6  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r/org.eclipse.jgit-3.2.0.201312181205-r.jar
+Source7  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r/org.eclipse.jgit-3.2.0.201312181205-r.pom
+Source8  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/5.3.0.201903130848-r/org.eclipse.jgit-5.3.0.201903130848-r.jar
+Source9  : https://repo.maven.apache.org/maven2/org/eclipse/jgit/org.eclipse.jgit/5.3.0.201903130848-r/org.eclipse.jgit-5.3.0.201903130848-r.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause EPL-1.0
@@ -66,23 +67,26 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.ec
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit-parent/3.2.0.201312181205-r
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit-parent/3.2.0.201312181205-r/org.eclipse.jgit-parent-3.2.0.201312181205-r.pom
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.jar
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit-parent/5.3.0.201903130848-r
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit-parent/5.3.0.201903130848-r/org.eclipse.jgit-parent-5.3.0.201903130848-r.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.pom
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r/org.eclipse.jgit-3.2.0.201312181205-r.jar
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r/org.eclipse.jgit-3.2.0.201312181205-r.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r/org.eclipse.jgit-3.2.0.201312181205-r.pom
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r/org.eclipse.jgit-3.2.0.201312181205-r.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/5.3.0.201903130848-r
-cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/5.3.0.201903130848-r/org.eclipse.jgit-5.3.0.201903130848-r.jar
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/5.3.0.201903130848-r/org.eclipse.jgit-5.3.0.201903130848-r.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/5.3.0.201903130848-r
-cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/5.3.0.201903130848-r/org.eclipse.jgit-5.3.0.201903130848-r.pom
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/5.3.0.201903130848-r/org.eclipse.jgit-5.3.0.201903130848-r.pom
 
 
 %files
@@ -92,6 +96,7 @@ cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/jgit/org.ec
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit-parent/2.0.0.201206130900-r/org.eclipse.jgit-parent-2.0.0.201206130900-r.pom
 /usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit-parent/3.2.0.201312181205-r/org.eclipse.jgit-parent-3.2.0.201312181205-r.pom
+/usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit-parent/5.3.0.201903130848-r/org.eclipse.jgit-parent-5.3.0.201903130848-r.pom
 /usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.jar
 /usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/2.0.0.201206130900-r/org.eclipse.jgit-2.0.0.201206130900-r.pom
 /usr/share/java/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/3.2.0.201312181205-r/org.eclipse.jgit-3.2.0.201312181205-r.jar
